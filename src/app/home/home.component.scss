@@ -2,7 +2,14 @@
 #page{
     max-width:1280px;
   }
-  
+
+  h5{
+      color:rgb(36, 109, 206);   
+  }
+  .mi-item{
+     color:rgb(36, 109, 206);   
+     font-size:12px;
+  }
   header{
     max-width:1280px;  
     width: 100%;
@@ -17,7 +24,7 @@
     height: auto;
     .bloc {
         margin-right: 2%;
-        width: 80% !important;
+        width:90% !important;
         
       }
 }
@@ -27,16 +34,12 @@
 }
   
 div{ 
-    float: left;
-    margin: 0 0 20px 1%;
-    padding: 0;   
+    float: left;  
   }
   #bar1{
-    width:19%;
+    width:17%;
   }
-  #bar2{
-    width:18%;
-  }
+
   footer {
     clear: both;
     width: 100%;
@@ -51,61 +54,108 @@ div{
     display: flex;
     justify-content: center;
     text-decoration:underline;
+    &1{
+        display: inline-table;
+        text-decoration:underline;
+        justify-content: center;
+
+
+    }
 }
   .years{
-   margin: 0px 47px 0px 11px;
-   background-color:greenyellow;
+    background-color: #aed475;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;   
+    margin: 6px 19px;
+    border-radius: 7px;
+    margin: 5px 12px;
   }
   .selected {
     background-color: green!important;
   }
   
   /* Nos media queries */
-  
-  @media screen and (max-width: 1000px) {
-      #bar1, #bar2{
-         width:39%;	
-      }
-      div{
-         float: left;
-         margin: 0 0 20px 1%;
-         padding: 0;   
-      }     
+  * {
+    box-sizing: border-box;
+  }
+  .column {
+    float: left;
+    width: 20%;
+    padding: 20px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (min-width: 700px) and (max-width: 1024px)  {
+    .column {
+      width: 50%;
+    }
+    div{
+        float: left;
+        margin: 0 -2px 20px;
+        padding: 0;  
+     }  
+    .years{
+        margin: 5px 34px
+    }
+    .img-block{
+        padding: 24px;
+        width: 100%;
+        float: left;
+        margin: 0px -2px 20px;
+     }
+     .sub-head1{
+        display: inline-table;
+        text-decoration: underline;
+        justify-content: center;
+        margin: -10px 70px 24px 59px;
+     }
   }
 
-  @media screen and (max-width: 768px ){
-    #content{
-    width: 100%;
+
+  @media screen and (min-width: 320px)   and (max-width: 700px){
+
+    .column {
+      width: 100%;
     }
-    #bar1, #bar2{
-        width:49%;	
+    div{
+        float: left;
+        margin: 0 -2px 20px;
+        padding: 0; 
+     }  
+     .img-block{
+        padding: 24px;
+        width: 100%;
+        float: left;
+        margin: 0px -2px 20px;
      }
-     .bloc{
-         width:100%
+     .years{
+        margin: 8px 40px;
+     }
+     .sub-head1{
+        margin: 20px 72px !important;
      }
   }
-  
-  @media screen and (max-width: 700px) {
-      #bar1, #bar2{
-         clear:both;
-         width:100%;	
+
+
+  @media screen and (min-width: 1024px) and (max-width:1440px) {
+      .column{
+         width:20%;	
       }
       div{
          float: left;
-         margin: 0 0 20px 1%;
-         padding: 0;   
-      }
-      #content {
-         clear:both;
-         width:100%;	
-         .bloc {
-            margin:0;
-            padding: 20px;
-            color: #333;
-            background: #fff;
-         }	
+         margin: 0 -2px 20px;
+         padding: 0;  
+      }     
   }
-}
+  
+  
+
   
   /******************/
    body {
@@ -114,7 +164,6 @@ div{
       font-family: Verdana, Geneva, sans-serif;
       line-height: 1.2em;
       font-size:1em;
-      background:url(http://www.onextrapixel.com/examples/responsive-design/grid.png) no-repeat;
   }
   h1 {
       line-height: 100%;

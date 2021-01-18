@@ -1,65 +1,54 @@
-
-<article id="page">
+<div class="row">
+    <div class="column">
+      <div class="bloc">
+              <h3>Filters</h3>
+               <p class="sub-head">Launch Year</p>
+               
+             <div class="years" 
+             *ngFor="let year of YearInfo"
+              (click)="onSelect(year)"
+             [class.selected]="year === selectedYear">
+               <span> {{year}} </span></div>   
+               
+       
+       <p class="sub-head1">Successful launch</p>
+       <div class="years" 
+       *ngFor="let flag of criteria"
+        (click)="onSelectLanchSS(flag)"
+       [class.selected]="flag === selectedFlagSS">
+          <span>{{flag}} </span></div>  
+          
+          <p class="sub-head1">Successful Landing</p>
+          <div class="years" 
+          *ngFor="let flag of criteria"
+           (click)="onSelectLandingSS(flag)"
+          [class.selected]="flag === selectedFlagLand">
+            <span> {{flag}}</span> </div>  
+           </div>
+    </div>
+    
+    <div class="column" *ngFor="let item of dataitems">
+       
+   <article class="bloc">
+   <div class="img-block">
+           <img
+           height="180"
+           width="190"
+           loading="lazy"
+           [src]="item.links.mission_patch"
+           alt="Mission patch of {{item.mission_name }}"
+         />
+   </div>
+    <h5>{{item.mission_name}} #{{item.flight_number}}</h5>
+    <h4>Mission Ids</h4>
+       <ul>
+           <li class="mi-item">{{item.mission_id}}</li>
+       </ul>
+  <p> <span>Launch Year:</span> <span class="mi-item"> {{item.launch_year}}</span> </p>
+   <p><span>Successful Launch:</span> <span class="mi-item"> {{item.launch_success}}</span> </p>
+   <p> <span>Successful Landing:</span> <span class="mi-item"> {{item.launch_success}}</span></p>
   
-    <section id="content">
-        <div class="bloc">
-            <h2>Filters</h2>
-             <p class="sub-head">Launch Year</p>
-           <span class="years" 
-           *ngFor="let year of YearInfo"
-            (click)="onSelect(year)"
-           [class.selected]="year === selectedYear">
-              {{year}} </span>   
-             
-     
-     <p class="sub-head">Successful launch</p>
-     <span class="years" 
-     *ngFor="let flag of criteria"
-      (click)="onSelectLanchSS(flag)"
-     [class.selected]="flag === selectedFlagSS">
-        {{flag}} </span>  
-        
-        <p class="sub-head">Successful Landing</p>
-        <span class="years" 
-        *ngFor="let flag of criteria"
-         (click)="onSelectLandingSS(flag)"
-        [class.selected]="flag === selectedFlagLand">
-           {{flag}} </span>  
-         </div>
-    </section>
- 
+   </article> 
+    </div>
     
- <div id="bar1"  *ngFor="let item of dataitems">
- <article class="bloc">
- <div class="img-block">
-         <img
-         height="200"
-         width="200"
-         mat-card-avatar
-         loading="lazy"
-         [src]="item.links.mission_patch"
-         alt="Mission patch of {{item.mission_name }}"
-       />
- </div>
-  <h3>{{item.mission_name}} #{{item.flight_number}}</h3>
-  <h3>Mission Ids</h3>
-     <ul>
-         <li>{{item.mission_id}}</li>
-     </ul>
- <p>Launch Year: {{item.launch_year}}</p>
- <p>Successful Launch:{{item.launch_success}}</p>
- <!-- <p>Successful Landing:{{item.cores.land_success}}</p> -->
- </article>
- </div>
-    
- </article>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  </div>
