@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod",
     "dev:ssr": "ng run XT-App:serve-ssr",
     "serve:ssr": "node dist/XT-App/server/main.js",
     "build:ssr": "ng build --prod && ng run XT-App:server:production",
