@@ -5,9 +5,21 @@
   <title>XTApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'">
-
+  <!-- <meta http-equiv="Content-Security-Policy"
+   content="default-src 'self' data: gap: https://api.spacexdata.com/v3/launches?limit=100 'unsafe-eval'; 
+  style-src 'self' 'unsafe-inline'; media-src *;
+  **script-src 'self' https://api.spacexdata.com/v3/launches?limit=100 'unsafe-inline' 'unsafe-eval';** "> -->
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+
+  <metahttp-equiv="Content-Security-Policy" content= 
+  "default-src 'self' https://api.spacexdata.com/v3/launches?limit=100;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  img-src 'self' https://api.spacexdata.com/v3/launches?limit=100; 
+  style-src 'self' 'unsafe-inline' https://api.spacexdata.com/v3/launches?limit=100; 
+  font-src 'self'https://api.spacexdata.com/v3/launches?limit=100; frame-src 'self'; 
+  object-src 'none'; 
+  connect-src https://api.spacexdata.com/v3/launches?limit=100">
+
 </head>
 <body>
   <app-root></app-root>

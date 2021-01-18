@@ -4,10 +4,10 @@ const path= require('path');
 const app=express();
 
 app.use (express.static(__dirname +'/dist/XT-App'));
-
-app.get('/*',function (req,res){
-    res.sendFile(path.join(__dirname +'/dist/XT-App/index.html'));
-});
+res.sendFile(path.join(__dirname +'/dist/XT-App/index.html'));
+// app.get('/*',function (req,res){
+//     res.sendFile(path.join(_dirname +'/dist/XT-App/index.html'));
+// });
 
 
 //start the app
